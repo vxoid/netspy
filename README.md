@@ -26,7 +26,7 @@ func main() {
 		netspy.NewRule([]string{"catalogue"}, []string{"category"}),
 	}
 
-	crawler := spynet.NewCrawler[string](start, hosts, rules, handler)
+	crawler := netspy.NewCrawler[string](start, hosts, rules, handler)
 
 	outputs, err := crawler.Crawl()
 	if err != nil {
